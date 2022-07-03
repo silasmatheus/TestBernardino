@@ -1,0 +1,73 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Teste Bernardino",
+        "description": "Vaga desenvolvedor Node / React / Aws"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000",
+            "description": "API Dev"
+        }
+    ],
+    "paths": {
+        "/collaborators": {
+            "post": {
+                "summary": "Collaborator Registration",
+                "tags": ["Collaborators"],
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Collaborator" 
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Collaborator"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Product already exists!"
+                    },
+                    "401": {
+                        "description": "Unauthorized!"
+                    }
+                }
+            }            
+        }
+    },
+    "components": {
+        "schemas": {
+            "Collaborator": {
+                "type": "object",
+                "properties": {
+                    "fullName": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "securitySchemes": {
+        "bearerAuth": {
+            "type": "http",
+            "scheme": "bearer",
+            "bearerFormat": "JWT"
+        }
+    }
+}

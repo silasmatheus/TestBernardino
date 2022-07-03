@@ -1,0 +1,32 @@
+{
+  "name": "testbernardino",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silasmatheus/TestBernardino.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silasmatheus/TestBernardino/issues"
+  },
+  "homepage": "https://github.com/silasmatheus/TestBernardino#readme",
+  "dependencies": {
+    "@types/swagger-ui-express": "^4.1.3",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.0",
+    "path": "^0.12.7",
+    "swagger-ui-express": "^4.4.0"
+  }
+}
