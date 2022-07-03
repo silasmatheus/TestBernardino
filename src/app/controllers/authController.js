@@ -1,6 +1,6 @@
 import express from "express";
 import User from "../models/User.js"
-import bcrypt from "bcrypt"
+import bcryptjs from "bcryptjs"
 import jwt from "jsonwebtoken";
 import authConfig from "../../config/config.json" assert {type: 'json'}
 
@@ -45,7 +45,7 @@ router.post("/authenticate", async (req, res) => {
     if(!user)
         return res.status(400).send({error: 'Invalid user'})
 
-    if(!await bcrypt.compare(password, user.password))
+    if(!await bcryptjs.compare(password, user.password))
         return res.status(400).send({error: 'Invalid password'})
 
     user.password = undefined;

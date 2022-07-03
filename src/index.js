@@ -13,14 +13,14 @@ app.use(bodyParser.urlencoded({extended : false}))
 import authController from "./app/controllers/authController.js"
 authController(app)
 
-import collaborators from "./app/controllers/collaboratorsController.js"
-collaborators(app)
+// import collaborators from "./app/controllers/collaboratorsController.js"
+// collaborators(app)
 
-import areas from "./app/controllers/areasController.js"
-areas(app)
+// import areas from "./app/controllers/areasController.js"
+// areas(app)
 
 
-app.get('/v1/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('ok')
 })
 

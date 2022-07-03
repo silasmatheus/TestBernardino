@@ -2,7 +2,7 @@
     "openapi": "3.0.0",
     "info": {
         "title": "Teste Bernardino",
-        "description": "Vaga desenvolvedor Node / React / Aws"
+        "description": "Vaga desenvolvedor Node / React / Aws / Docker / Swagger"
     },
     "servers": [
         {
@@ -58,16 +58,36 @@
                 "properties": {
                     "fullName": {
                         "type": "string"
+                    },
+                    "salary": {
+                        "type": "number"
+                    },
+                    "status": {
+                        "type": "boolean"
+                    },
+                    "birthDate": {
+                        "type": "string"
+                    },
+                    "area": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Area": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
                     }
                 }
             }
-        }
-    },
-    "securitySchemes": {
-        "bearerAuth": {
-            "type": "http",
-            "scheme": "bearer",
-            "bearerFormat": "JWT"
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
         }
     }
 }
